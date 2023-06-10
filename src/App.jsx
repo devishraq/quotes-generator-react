@@ -26,12 +26,12 @@ export default () => {
             });
     };
 
-    const rawAdvice = advice.advice;
+    const rawAdvice = advice.advice.slice(0, -1);
 
     return (
         <div className="app">
             <div className={`card ${advice.isFetching ? "fetching" : ""}`}>
-                <h1 className="heading">{rawAdvice}</h1>
+                <h1 className="heading"><span>' </span>{rawAdvice}<span> '</span></h1>
                 <button onClick={fetchAdvice} className="button">
                     <span>Generate!</span>
                 </button>
