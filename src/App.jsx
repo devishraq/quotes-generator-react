@@ -3,14 +3,7 @@ import axios from "axios";
 import "./App.css";
 
 export default () => {
-    const [advice, setAdvice] = useState({
-        advice: "",
-        isFetching: false, // Removed initial fetching state
-    });
-
-    useEffect(() => {
-        fetchAdvice();
-    }, []);
+    const [advice, setAdvice] = useState({ advice: "", isFetching: false });
 
     const fetchAdvice = () => {
         setAdvice((prevState) => ({ ...prevState, isFetching: true }));
@@ -26,8 +19,12 @@ export default () => {
             });
     };
 
-    const rawAdvice = advice.advice.slice(0, -1);
+    useEffect(() => {
+        fetchAdvice();
+    }, []);
 
+
+    const rawAdvice = advice.advice.slice(0, -1);
     return (
         <div className="app">
             <div className={`card ${advice.isFetching ? "fetching" : ""}`}>
