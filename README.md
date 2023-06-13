@@ -1,6 +1,6 @@
 # React Quotes Generator
 
-A simple quotes generator built with React js and vite with awesome ui and response mobile friendly design.
+A simple quotes generator built with React js and vite with awesome ui and respons mobile friendly design.
 
 ![Safari (Big Sur) - Dark](https://github.com/devishraq/quotes-generator-react/assets/101325013/0e591624-d95f-45e4-b2fd-b23adbfc57c9)
 
